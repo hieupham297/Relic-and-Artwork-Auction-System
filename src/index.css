@@ -5,6 +5,12 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image: url("../src/Assets/background-carAuction.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center 70%;
+  background-attachment: fixed;
+  overflow-y: scroll;
 }
 
 code {

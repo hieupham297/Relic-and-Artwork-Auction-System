@@ -1,0 +1,32 @@
+/* Search.css */
+
+.search-wrapper {
+    height: 30px;
+    width: 18%;
+    margin-top: auto;
+    margin-bottom: auto;
+    display: flex;
+    align-items: center;
+    background-color: #FFFFFF;
+    border: 1px solid #8464EF;
+    border-radius: 20px;
+    padding: 5px;
+
+}
+
+.fa-search {
+    margin-right: 10px;
+    color: #888;
+    /* Màu của biểu tượng tìm kiếm */
+}
+
+input {
+    border: none;
+    outline: none;
+    background: transparent;
+    width: 100%;
+}
+
+input::placeholder {
+    color: #666666;
+}
