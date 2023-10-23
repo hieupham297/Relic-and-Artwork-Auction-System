@@ -1,0 +1,21 @@
+.page-title {
+    color: #3F5CA8;
+    padding-left: 30px;
+    padding-right: 50px;
+}
+
+.auction-list-main {
+    display: flex;
+    padding-left: 30px;
+    padding-right: 50px;
+}
+
+.filter-section {
+    width: 35%;
+}
+
+.items-section {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}

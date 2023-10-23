@@ -1,0 +1,53 @@
+.auction-card-main {
+    width: 220px;
+    height: 380px;
+    background: linear-gradient(to bottom left, white, #d6cff8b6);
+    box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, 0.2);
+    padding: 30px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+#grey-label {
+    font-weight: bold;
+    font-size: 14px;
+    color: #696969;
+}
+
+#black-label {
+    font-weight: bold;
+    font-size: 14px;
+    color: black;
+}
+
+#status-label {
+    font-weight: bold;
+    font-size: 14px;
+    color: #3F5CA8;
+}
+
+.auction-time {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.auction-item {
+    margin-bottom: 20px;
+}
+
+.info {
+    margin-bottom: 20px;
+}
+
+#auction-image {
+    width: 220px;
+    height: 150px;
+}
+
+#auction-item-name {
+    font-weight: bold;
+    font-size: 17px;
+    margin-top: 5px;
+}

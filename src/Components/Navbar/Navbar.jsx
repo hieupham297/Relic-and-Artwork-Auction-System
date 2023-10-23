@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Logo } from "../Logo/Logo";
 import { Search } from "../Search/Search";
 import "./Navbar.css";
@@ -18,6 +19,9 @@ const Navbar = () => {
           <NavLink to="contact">Liên hệ</NavLink>
         </div>
         <Search />
+        <span className="avatar-icon material-symbols-outlined">
+          account_circle
+        </span>
       </div>
     </>
   );
