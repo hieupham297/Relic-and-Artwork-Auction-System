@@ -20,13 +20,13 @@
     /* Màu của biểu tượng tìm kiếm */
 }
 
-input {
+.search-wrapper input {
     border: none;
     outline: none;
     background: transparent;
     width: 100%;
 }
 
-input::placeholder {
+.search-wrapper input::placeholder {
     color: #666666;
 }

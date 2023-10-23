@@ -1,0 +1,21 @@
+.custom-input {
+    display: flex;
+    border-bottom: 2px solid #3F5CA8;
+    padding: 10px 10px 0px 10px;
+}
+
+.icon {
+    color: #A5B9ED;
+}
+
+.custom-input input {
+    font-size: 17px;
+    margin-left: 15px;
+    width: 100%;
+    border: none;
+    outline: none;
+}
+
+.custom-input input::placeholder {
+    color: #A5B9ED;
+}
