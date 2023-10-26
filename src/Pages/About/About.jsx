@@ -1,7 +1,10 @@
+import { PageTitle } from "../../Components/PageTitle/PageTitle";
 import "./About.css";
 
 export const About = () => {
-    return (
-        <h1>ABOUT</h1>
-    );
+  return (
+    <>
+      <PageTitle pageTitle="Giới thiệu" />
+    </>
+  );
 };

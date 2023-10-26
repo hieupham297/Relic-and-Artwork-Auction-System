@@ -25,7 +25,12 @@ export const AuctionCard = () => {
           </div>
         </div>
 
-        <CustomButton name="Chi tiết" height="40px" width="100px" />
+        <CustomButton
+          name="Chi tiết"
+          height="40px"
+          width="100px"
+          route="detail"
+        />
       </div>
     </>
   );

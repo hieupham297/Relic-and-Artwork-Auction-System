@@ -1,5 +1,10 @@
+import { PageTitle } from "../../Components/PageTitle/PageTitle";
 import "./News.css";
 
 export const News = () => {
-  return <h1>NEWS</h1>;
+  return (
+    <>
+      <PageTitle pageTitle="Tin tức" />
+    </>
+  );
 };

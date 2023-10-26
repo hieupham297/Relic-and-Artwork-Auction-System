@@ -1,7 +1,10 @@
+import { PageTitle } from "../../Components/PageTitle/PageTitle";
 import "./Contact.css";
 
 export const Contact = () => {
     return (
-        <h1>CONTACT</h1>
+        <>
+        <PageTitle pageTitle="Liên hệ" />
+        </>
     );
 };

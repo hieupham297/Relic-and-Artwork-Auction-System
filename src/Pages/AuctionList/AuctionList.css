@@ -11,11 +11,43 @@
 }
 
 .filter-section {
-    width: 35%;
+    width: 25%;
+    padding-right: 30px;
+}
+
+.search-area input {
+    height: 45px;
+    width: 100%;
+    font-size: 17px;
+    border: 1px solid #8464EF;
+    border-radius: 10px;
+}
+
+.date-option {
+    margin-top: 30px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+.date-option span {
+    display: flex;
+    align-items: center;
+}
+.date-option label {
+    font-weight: bold;
+    font-size: 17px;
+    margin-right: 5px;
+}
+
+.date-option select {
+    width: 50px;
+    border-radius: 5px;
+    border: 1px solid #8464EF;
 }
 
 .items-section {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 40px;
+    gap: 50px;
+    padding-left: 60px;
 }
