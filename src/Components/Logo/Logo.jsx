@@ -1,4 +1,4 @@
-import logo from "../../Assets/logo-car-auction.png";
+import logo from "../../Assets/logo-auction.png";
 import "./Logo.css";
 export const Logo = () => {
   return (

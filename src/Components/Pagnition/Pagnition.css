@@ -1,0 +1,19 @@
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.page-link {
+    margin: 5px;
+    padding: 5px 10px;
+    color: #8464EF;
+    border: 1px solid #8464EF;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.page-link:hover {
+    background-color: #8464EF;
+    color: #fff;
+}

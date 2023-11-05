@@ -1,0 +1,88 @@
+.profile-content {
+    padding-left: 50px;
+    padding-right: 50px;
+    display: flex;
+}
+
+#userName {
+    color: #3F5CA8;
+    /* margin-bottom: 30px; */
+}
+
+.user-info {
+    border-radius: 20px;
+    background-color: white;
+    width: 30%;
+    height: 600px;
+    padding: 30px;
+    margin-right: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.user-info table {
+    width: 100%;
+    height: 50%;
+    text-align: left;
+    margin-bottom: 30px;
+}
+
+.user-info th {
+    color: #3F5CA8;
+}
+
+.user-info td {
+    color: #6E52CC;
+    width: 40%;
+}
+
+
+.history-list {
+    width: 70%;
+    background-color: white;
+    border-radius: 20px;
+    padding: 20px 20px 0px 20px;
+}
+
+.tabs-in-profile {
+    position: relative;
+    padding-left: 0px;
+    list-style: none;
+    display: flex;
+    width: 60%;
+    border-radius: 10px;
+    border: 1px solid #6E52CC;
+    margin-bottom: 20px;
+}
+
+.tab-item-in-profile {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 17px;
+    font-weight: bold;
+    background-color: white;
+}
+
+.tab-item-in-profile:hover {
+    background-color: #8464EF;
+    color: white;
+}
+
+.tab-item-in-profile.active {
+    background-color: #8464EF;
+    color: white;
+}
+
+.auction-list {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}

@@ -50,11 +50,22 @@
     align-items: center;
     height: 30px;
     width: 100%;
+    padding-left: 20px;
     margin-bottom: 30px;
 }
 
-.remember-account input {
-    margin-top: 7px;
+.remember-account input[type="checkbox"] {
+    width: 15px;
+    height: 15px;
+    border: 4px solid #8464EF;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.remember-account span {
+    color: #3F5CA8;
+    margin-left: 13px;
+    margin-top: 2px;
 }
 
 .forget-password a {

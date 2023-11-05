@@ -1,6 +1,7 @@
 import { AuctionCard } from "../../Components/AuctionCard/AuctionCard";
 import { CustomButton } from "../../Components/CustomButton/CustomButton";
 import { PageTitle } from "../../Components/PageTitle/PageTitle";
+import { Pagination } from "../../Components/Pagnition/Pagnition";
 import "./AuctionList.css";
 
 export const AuctionList = () => {
@@ -15,18 +16,24 @@ export const AuctionList = () => {
             <div className="date-option">
               <span>
                 <label htmlFor="">Ngày</label>
-                <select name="" id=""></select>
+                <select name="" id="">
+                  <option value="">Chọn</option>
+                </select>
               </span>
               <span>
                 <label htmlFor="">Tháng</label>
-                <select name="" id=""></select>
+                <select name="" id="">
+                  <option value="">Chọn</option>
+                </select>
               </span>
               <span>
                 <label htmlFor="">Năm</label>
-                <select name="" id=""></select>
+                <select name="" id="">
+                  <option value="">Chọn</option>
+                </select>
               </span>
             </div>
-            <CustomButton name="Lọc" height="40px" width="20%" />
+            <CustomButton name="Lọc" height="30px" width="20%" />
           </div>
           <div className="filter-area">
             <h2>Trạng thái tài sản</h2>
@@ -46,13 +53,16 @@ export const AuctionList = () => {
             </div>
           </div>
         </div>
-        <div className="items-section">
-          <AuctionCard />
-          <AuctionCard />
-          <AuctionCard />
-          <AuctionCard />
-          <AuctionCard />
-          <AuctionCard />
+        <div>
+          <div className="items-section">
+            <AuctionCard />
+            <AuctionCard />
+            <AuctionCard />
+            <AuctionCard />
+            <AuctionCard />
+            <AuctionCard />
+          </div>
+          <Pagination />
         </div>
       </div>
     </>

@@ -1,15 +1,19 @@
 .homepage-main {
     display: flex;
-    padding: 20px;
+    justify-content: space-between;
+    padding: 20px 50px 0px 50px;
 }
 
 .left-side {
     width: 40%;
-    padding: 80px;
+    padding: 10px 70px 10px 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .left-side h1 {
-    font-size: 3rem;
+    font-size: 2.5rem;
 }
 
 .right-side {
@@ -23,6 +27,7 @@
     color: #8464EF;
     display: block;
     font-size: 3.2rem;
+    margin-bottom: 20px;
 }
 
 #description {

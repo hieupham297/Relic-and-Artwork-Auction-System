@@ -6,33 +6,55 @@
 
 .auction-list-main {
     display: flex;
-    padding-left: 30px;
+    padding-left: 50px;
     padding-right: 50px;
 }
 
 .filter-section {
-    width: 25%;
+    width: 100%;
     padding-right: 30px;
 }
 
+.filter-section h2,
+label {
+    /* color: rgba(0, 0, 0, 0.724); */
+    color: #3F5CA8;
+}
+
+.search-area {
+    background-color: white;
+    border-radius: 20px;
+    padding: 30px 20px;
+}
+
 .search-area input {
-    height: 45px;
+    height: 40px;
     width: 100%;
     font-size: 17px;
     border: 1px solid #8464EF;
     border-radius: 10px;
 }
 
-.date-option {
+.filter-area {
     margin-top: 30px;
+    background-color: white;
+    border-radius: 20px;
+    padding: 10px 20px 20px 20px;
+}
+
+.date-option {
+    margin-top: 40px;
     margin-bottom: 10px;
     display: flex;
     justify-content: space-between;
 }
+
 .date-option span {
     display: flex;
     align-items: center;
+    height: 40px;
 }
+
 .date-option label {
     font-weight: bold;
     font-size: 17px;
@@ -40,7 +62,9 @@
 }
 
 .date-option select {
-    width: 50px;
+    color: #3F5CA8;
+    font-size: 15px;
+    height: 65%;
     border-radius: 5px;
     border: 1px solid #8464EF;
 }
@@ -50,4 +74,5 @@
     grid-template-columns: repeat(3, 1fr);
     gap: 50px;
     padding-left: 60px;
+    margin-bottom: 50px;
 }

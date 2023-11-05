@@ -1,7 +1,7 @@
 .navbar-main {
     display: flex;
     justify-content: space-between;
-    padding: 0px 50px 0px 30px;
+    padding: 0px 50px 0px 50px;
 }
 
 .menu-list {
@@ -12,16 +12,40 @@
     margin-bottom: auto;
 }
 
-.menu-list a {
-    text-decoration: none;
-    color: black;
+.nav-link-main {
+    margin-top: 15px;
 }
 
-.menu-list a:hover {
+.nav-link-main a {
+    padding-left: 10px;
+    padding-right: 10px;
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.724);
+    font-size: 18px;
+    font-weight: 600;
+}
+
+#underline {
+    border-top: 1px solid transparent;
+    margin-top: 15px;
+}
+
+.nav-link-main a:hover {
     color: #8464EF;
 }
 
+.nav-link-main a:hover+#underline {
+    border-top: 1px solid #8464EF;
+    color: #8464EF;
+}
+
+
+
 .avatar-icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     font-size: 40px;
     color: #8464EF;
     line-height: 60px;

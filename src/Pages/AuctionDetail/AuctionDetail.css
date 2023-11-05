@@ -1,8 +1,10 @@
 .auction-info {
-    padding-left: 30px;
+    height: 520px;
+    padding-left: 50px;
     padding-right: 50px;
     display: flex;
-    margin-bottom: 100px;
+    justify-content: space-between;
+    margin-bottom: 70px;
 }
 
 .image-area {
@@ -13,12 +15,14 @@
     width: 40%;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     align-items: center;
 }
 
 .product-img {
     border-radius: 20px;
-    width: 95%;
+    width: 90%;
+    height: 520px
 }
 
 .time-area {
@@ -28,7 +32,7 @@
     background-color: white;
     height: 55px;
     width: 100%;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
     box-shadow: 1px 2px 2px 0 rgba(0, 0, 0, 0.402);
 }
 
@@ -40,27 +44,27 @@
 .detail-info {
     background-color: white;
     width: 100%;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     box-shadow: 1px 2px 3px 0 rgba(0, 0, 0, 0.402);
 }
 
-.detail-info table {
+.info-table {
     width: 100%;
     padding: 5px 40px 5px 25px;
 }
 
-.detail-info tr {
+.info-table tr {
     text-align: left;
     height: 35px;
 }
 
-.detail-info td {
+.info-table td {
     color: #6E52CC;
+    letter-spacing: 1px;
 }
 
 .auction-description {
-    padding-left: 30px;
-    padding-right: 50px;
+    padding: 0px 50px 50px 50px;
 }
 
 .tabs {
@@ -69,9 +73,15 @@
     display: flex;
     justify-content: space-between;
     width: 50%;
-    height: 60px;
+    height: 50px;
     border-radius: 10px;
     border: 2px solid #6E52CC;
+}
+
+#tab1,
+#tab2,
+#tab3 {
+    padding: 20px;
 }
 
 .tab-item {
@@ -99,7 +109,7 @@
 }
 
 .tab-content {
-    margin-top: 50px;
+    margin-top: 40px;
     border-radius: 10px;
     border: 2px solid #8464EF;
 }

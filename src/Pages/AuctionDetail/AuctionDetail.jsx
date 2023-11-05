@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import { PageTitle } from "../../Components/PageTitle/PageTitle";
 import "./AuctionDetail.css";
-import auction_toyota from "../../Assets/auction-toyota.jpg";
+import thieu_nu_mua_thu from "../../Assets/thieu-nu-mua-thu.jpg";
 import { CustomButton } from "../../Components/CustomButton/CustomButton";
 import { CustomLabel } from "../../Components/CustomLabel/CustomLabel";
 
@@ -16,7 +16,7 @@ export const AuctionDetail = () => {
       <PageTitle pageTitle="Ô tô Toyota đã qua sử dụng" />
       <div className="auction-info">
         <div className="image-area">
-          <img className="product-img" src={auction_toyota} alt="" />
+          <img className="product-img" src={thieu_nu_mua_thu} alt="" />
         </div>
         <div className="info-area">
           <div className="time-area">
@@ -27,7 +27,7 @@ export const AuctionDetail = () => {
             <span>11 giây</span>
           </div>
           <div className="detail-info">
-            <table>
+            <table className="info-table">
               <tr>
                 <th>
                   <CustomLabel label="Mã tài sản:" />
@@ -93,7 +93,7 @@ export const AuctionDetail = () => {
           <CustomButton
             name="Đăng ký tham gia đấu giá"
             height="45px"
-            width="100%"
+            width="380px"
           />
         </div>
       </div>
@@ -123,32 +123,70 @@ export const AuctionDetail = () => {
             id="tab1"
             style={{ display: activeTab === "tab1" ? "block" : "none" }}
           >
-            <h1>MÔ TẢ TÀI SẢN</h1>
+            <table className="info-table">
+              <tr>
+                <th>
+                  <CustomLabel label="Tên" />
+                </th>
+                <td>Thiếu nữ mùa thu</td>
+              </tr>
+              <tr>
+                <th>
+                  <CustomLabel label="Kích thước" />
+                </th>
+                <td>50 x 60cm</td>
+              </tr>
+              <tr>
+                <th>
+                  <CustomLabel label="Chất liệu" />
+                </th>
+                <td>Sơn dầu</td>
+              </tr>
+              <tr>
+                <th>
+                  <CustomLabel label="Năm sáng tác" />
+                </th>
+                <td>2022</td>
+              </tr>
+              <tr>
+                <th>
+                  <CustomLabel label="Họa sỹ" />
+                </th>
+                <td>Nguyễn Văn Cường</td>
+              </tr>
+            </table>
           </div>
           <div
             id="tab2"
             style={{ display: activeTab === "tab2" ? "block" : "none" }}
           >
-            <h2>Thông tin tổ chức đấu giá</h2>
-            <div>
-              <label htmlFor="">Tổ chức đấu giá tài sản</label>
-              <span>Công ty đấu giá hợp danh An Thuận Phát</span>
-            </div>
-            <div>
-              <label htmlFor="">Đấu giá viên</label>
-              <span>Phạm Huy Hiệu</span>
-            </div>
-            <div>
-              <label htmlFor="">Địa chỉ</label>
-              <span>Đông Hưng - Thái Bình</span>
-            </div>
+            <table className="info-table">
+              <tr>
+                <th>
+                  <CustomLabel label="Tổ chức đấu giá tài sản" />
+                </th>
+                <td>Công ty đấu giá hợp danh An Thuận Phát</td>
+              </tr>
+              <tr>
+                <th>
+                  <CustomLabel label="Đấu giá viên" />
+                </th>
+                <td>Phạm Huy Hiệu</td>
+              </tr>
+              <tr>
+                <th>
+                  <CustomLabel label="Địa chỉ" />
+                </th>
+                <td>Đông Hưng - Thái Bình</td>
+              </tr>
+            </table>
           </div>
           <div
             id="tab3"
             style={{ display: activeTab === "tab3" ? "block" : "none" }}
           >
             {" "}
-            <h1>THÔNG TIN LIÊN QUAN</h1>
+            <span>Hiện chưa có tài liệu nào được đăng tải</span>
           </div>
         </div>
       </div>

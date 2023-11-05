@@ -5,7 +5,7 @@ import "./Navbar.css";
 import { NavLink } from "react-router-dom";
 import { LoginModal } from "../LoginModal/LoginModal";
 
-const Navbar = () => {
+export const Navbar = () => {
   const [isLoginModalOpen, setIsLoginModalOpen] = useState(false);
   const openLoginModal = () => {
     setIsLoginModalOpen(true);
@@ -21,11 +21,11 @@ const Navbar = () => {
           <Logo />
         </NavLink>
         <div className="menu-list">
-          <NavLink to="homepage">Trang chủ</NavLink>
-          <NavLink to="auction-list">Các cuộc đấu giá</NavLink>
-          <NavLink to="news">Tin tức</NavLink>
-          <NavLink to="about">Giới thiệu</NavLink>
-          <NavLink to="contact">Liên hệ</NavLink>
+          <SpanNavLink navLinkName="Trang chủ" route="/homepage" />
+          <SpanNavLink navLinkName="Các cuộc đấu giá" route="/auction-list" />
+          <SpanNavLink navLinkName="Tin tức" route="/news" />
+          <SpanNavLink navLinkName="Giới thiệu" route="/about" />
+          <SpanNavLink navLinkName="Liên hệ" route="/contact" />
         </div>
         <Search />
         <span
@@ -43,4 +43,13 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export const SpanNavLink = (props) => {
+  return (
+    <>
+      <div className="nav-link-main">
+        <NavLink to={props.route}>{props.navLinkName}</NavLink>
+        <div id="underline"></div>
+      </div>
+    </>
+  );
+};

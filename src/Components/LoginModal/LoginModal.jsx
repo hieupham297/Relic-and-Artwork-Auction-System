@@ -53,7 +53,7 @@ export const LoginModal = (props) => {
             <div className="register-question">
               Bạn chưa có tài khoản?{" "}
               <span>
-                <a href="">Đăng ký ngay</a>
+                <a href="/register">Đăng ký ngay</a>
               </span>
             </div>
           </div>
