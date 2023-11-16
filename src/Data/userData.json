@@ -1,0 +1,58 @@
+{
+    "data": [
+        {
+            "userName": "admin",
+            "password": "admin",
+            "role": "admin",
+            "fullName": "System Admin"
+        },
+        {
+            "userName": "dtad1005",
+            "password": "dtad2002",
+            "role": "customer",
+            "userId": "DTAD1005",
+            "fullName": "Đỗ Thị Ánh Dương",
+            "email": "dtad1005@gmail.com",
+            "phoneNumber": "0975504618",
+            "gender": "Female",
+            "dob": "10/05/2002",
+            "address": "Gia Lâm - Hà Nội"
+        },
+        {
+            "userName": "nqdung2002",
+            "password": "nqdung2002",
+            "role": "customer",
+            "userId": "NQD0001",
+            "fullName": "Nguyễn Quang Dũng",
+            "email": "nqdung2002@gmail.com",
+            "phoneNumber": "0977504004",
+            "gender": "Male",
+            "dob": "27/08/2002",
+            "address": "Nam Từ Liêm - Hà Nội"
+        },
+        {
+            "userName": "hieuph2907",
+            "password": "hieuph2907",
+            "role": "customer",
+            "userId": "HPH2002",
+            "fullName": "Phạm Huy Hiệu",
+            "email": "hieuph2907@gmail.com",
+            "phoneNumber": "0977618004",
+            "gender": "Male",
+            "dob": "29/07/2002",
+            "address": "Đông Hưng - Thái Bình"
+        },
+        {
+            "userName": "manhhd2002",
+            "password": "manhhd2002",
+            "role": "customer",
+            "userId": "HDM0023",
+            "fullName": "Hoàng Đức Mạnh",
+            "email": "manhhd2002@gmail.com",
+            "phoneNumber": "0979002404",
+            "gender": "Male",
+            "dob": "07/07/2002",
+            "address": "Cầu Giấy - Hà Nội"
+        }
+    ]
+}

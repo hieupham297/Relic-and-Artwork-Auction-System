@@ -9,6 +9,7 @@ export const CustomButton = (props) => {
           <button
             id="custom-button"
             style={{ width: props.width, height: props.height }}
+            onClick={props.onClick}
           >
             {props.name}
           </button>

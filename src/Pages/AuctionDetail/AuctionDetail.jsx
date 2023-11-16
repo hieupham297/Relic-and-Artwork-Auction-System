@@ -1,22 +1,56 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 import { PageTitle } from "../../Components/PageTitle/PageTitle";
-import "./AuctionDetail.css";
-import thieu_nu_mua_thu from "../../Assets/thieu-nu-mua-thu.jpg";
 import { CustomButton } from "../../Components/CustomButton/CustomButton";
 import { CustomLabel } from "../../Components/CustomLabel/CustomLabel";
+import "./AuctionDetail.css";
+import { findAuctionById } from "../../Utils/function";
 
 export const AuctionDetail = () => {
+  const sampleData = require("../../Data/data.json");
+  const { auctionId } = useParams();
+  console.log(auctionId);
   const [activeTab, setActiveTab] = useState("tab1");
+  const [detailData, setDetailData] = useState("");
+  const [dataLoaded, setDataLoaded] = useState(false);
+
   const handleClickTab = (tabId) => {
     setActiveTab(tabId);
   };
+
+  useEffect(() => {
+    setDataLoaded(false);
+    const fetchData = async () => {
+      try {
+        const data = await findAuctionById(auctionId, sampleData.data);
+        console.log(data);
+        setDetailData(data);
+        setDataLoaded(true);
+      } catch (error) {
+        // Handle error if needed
+        console.error("Error fetching data:", error);
+        setDataLoaded(true); // Set dataLoaded to true to avoid indefinite loading
+      }
+    };
+
+    fetchData();
+  }, [auctionId, sampleData.data]);
+
+  if (!dataLoaded) {
+    return (
+      <div className="loading-spinner-container">
+        <div className="loading-spinner"></div>
+        <p>Loading...</p>
+      </div>
+    );
+  }
   return (
-    <>
-      <PageTitle pageTitle="Ô tô Toyota đã qua sử dụng" />
+    <div key={auctionId}>
+      <PageTitle pageTitle={detailData.productName} />
       <div className="auction-info">
         <div className="image-area">
-          <img className="product-img" src={thieu_nu_mua_thu} alt="" />
+          <img className="product-img" src={detailData.urlImg} alt="" />
         </div>
         <div className="info-area">
           <div className="time-area">
@@ -32,61 +66,61 @@ export const AuctionDetail = () => {
                 <th>
                   <CustomLabel label="Mã tài sản:" />
                 </th>
-                <td>OC123456</td>
+                <td>{detailData.productId}</td>
               </tr>
               <tr>
                 <th>
                   <CustomLabel label="Thời gian mở đăng ký:" />
                 </th>
-                <td>10/10/2023 08:00:00</td>
+                <td>{detailData.registerTimeOpen}</td>
               </tr>
               <tr>
                 <th>
                   <CustomLabel label="Thời gian kết thúc đăng ký:" />
                 </th>
-                <td>20/10/2023 08:00:00</td>
+                <td>{detailData.registerTimeClose}</td>
               </tr>
               <tr>
                 <th>
                   <CustomLabel label="Giá khởi điểm:" />
                 </th>
-                <td>300.000.000 VNĐ</td>
+                <td>{detailData.startPrice}</td>
               </tr>
               <tr>
                 <th>
                   <CustomLabel label="Phí đăng ký:" />
                 </th>
-                <td>500.000 VNĐ</td>
+                <td>{detailData.registrationFee}</td>
               </tr>
               <tr>
                 <th>
                   <CustomLabel label="Bước giá:" />
                 </th>
-                <td>5.000.000 VNĐ</td>
+                <td>{detailData.step}</td>
               </tr>
               <tr>
                 <th>
                   <CustomLabel label="Tiền đặt cược:" />
                 </th>
-                <td>60.000.000 VNĐ</td>
+                <td>{detailData.deposit}</td>
               </tr>
               <tr>
                 <th>
                   <CustomLabel label="Tên chủ tài sản:" />
                 </th>
-                <td>Đỗ Thị Ánh Dương</td>
+                <td>{detailData.ownerName}</td>
               </tr>
               <tr>
                 <th>
                   <CustomLabel label="Thời gian bắt đầu đấu giá:" />
                 </th>
-                <td>21/10/2023 09:00:00</td>
+                <td>{detailData.auctionStart}</td>
               </tr>
               <tr>
                 <th>
                   <CustomLabel label="Thời gian kết thúc đấu giá:" />
                 </th>
-                <td>21/10/2023 09:30:00</td>
+                <td>{detailData.auctionEnd}</td>
               </tr>
             </table>
           </div>
@@ -128,31 +162,31 @@ export const AuctionDetail = () => {
                 <th>
                   <CustomLabel label="Tên" />
                 </th>
-                <td>Thiếu nữ mùa thu</td>
+                <td>{detailData.productName}</td>
               </tr>
               <tr>
                 <th>
                   <CustomLabel label="Kích thước" />
                 </th>
-                <td>50 x 60cm</td>
+                <td>{detailData.size}</td>
               </tr>
               <tr>
                 <th>
                   <CustomLabel label="Chất liệu" />
                 </th>
-                <td>Sơn dầu</td>
+                <td>{detailData.material}</td>
               </tr>
               <tr>
                 <th>
                   <CustomLabel label="Năm sáng tác" />
                 </th>
-                <td>2022</td>
+                <td>{detailData.yearOfComposed}</td>
               </tr>
               <tr>
                 <th>
                   <CustomLabel label="Họa sỹ" />
                 </th>
-                <td>Nguyễn Văn Cường</td>
+                <td>{detailData.artist}</td>
               </tr>
             </table>
           </div>
@@ -165,19 +199,19 @@ export const AuctionDetail = () => {
                 <th>
                   <CustomLabel label="Tổ chức đấu giá tài sản" />
                 </th>
-                <td>Công ty đấu giá hợp danh An Thuận Phát</td>
+                <td>Công ty đấu giá hợp danh HDDM</td>
               </tr>
               <tr>
                 <th>
                   <CustomLabel label="Đấu giá viên" />
                 </th>
-                <td>Phạm Huy Hiệu</td>
+                <td>{detailData.ownerName}</td>
               </tr>
               <tr>
                 <th>
                   <CustomLabel label="Địa chỉ" />
                 </th>
-                <td>Đông Hưng - Thái Bình</td>
+                <td></td>
               </tr>
             </table>
           </div>
@@ -190,6 +224,6 @@ export const AuctionDetail = () => {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };

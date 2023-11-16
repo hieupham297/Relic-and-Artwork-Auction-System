@@ -1,11 +1,11 @@
 import { useState } from "react";
 import { Logo } from "../Logo/Logo";
-import { Search } from "../Search/Search";
 import "./Navbar.css";
 import { NavLink } from "react-router-dom";
 import { LoginModal } from "../LoginModal/LoginModal";
+import { CurrentTime } from "../CurrentTime/CurrentTime";
 
-export const Navbar = () => {
+export const Navbar = (props) => {
   const [isLoginModalOpen, setIsLoginModalOpen] = useState(false);
   const openLoginModal = () => {
     setIsLoginModalOpen(true);
@@ -27,17 +27,22 @@ export const Navbar = () => {
           <SpanNavLink navLinkName="Giới thiệu" route="/about" />
           <SpanNavLink navLinkName="Liên hệ" route="/contact" />
         </div>
-        <Search />
-        <span
-          className="avatar-icon material-symbols-outlined"
-          onClick={openLoginModal}
-        >
-          account_circle
-        </span>
+        <CurrentTime />
+        {props.isLoggedIn ? (
+          <p>{props.userData.fullName}</p>
+        ) : (
+          <span
+            className="avatar-icon material-symbols-outlined"
+            onClick={openLoginModal}
+          >
+            account_circle
+          </span>
+        )}
       </div>
       <LoginModal
         isLoginModalOpen={isLoginModalOpen}
         closeModal={closeLoginModal}
+        handleLoginSuccess={props.handleLoginSuccess}
       />
     </>
   );

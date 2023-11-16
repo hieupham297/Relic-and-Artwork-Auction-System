@@ -1,0 +1,111 @@
+.auction-in-session-main {
+    display: flex;
+    padding: 20px 100px;
+}
+
+.left-content {
+    position: relative;
+    width: 50%;
+    margin-right: 150px;
+}
+
+.left-content img {
+    width: 100%;
+    height: 500px;
+}
+
+.time-overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translateX(-100%, 0);
+    width: 320px;
+    text-align: center;
+    background-color: white;
+    color: black;
+    padding: 10px 0px 5px 0px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+}
+
+.time-overlay td {
+    text-align: center;
+    font-weight: bold;
+    font-size: 17px;
+}
+
+.left-content span {
+    display: block;
+    background-color: white;
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+    color: #038ACB;
+    padding: 15px 0px;
+}
+
+.right-content {
+    width: 35%;
+}
+
+.bid-history {
+    padding: 20px;
+    border-radius: 20px;
+    border: 2px solid #038ACB;
+    margin-bottom: 30px;
+}
+
+.bid-history table {
+    width: 100%;
+    margin-top: 10px;
+}
+
+.bid-history td {
+    padding: 10px;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+#bid-history-time {
+    font-size: 13px;
+    color: #666;
+    font-weight: 100;
+}
+
+#leaderboard-price {
+    color: #CC5DE0;
+}
+
+#leaderboard-id {
+    color: #FF895F;
+}
+
+.bid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    border-radius: 20px;
+    border: 2px solid #038ACB;
+}
+
+.bid table {
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.bid td {
+    border-bottom: 1px solid #038ACB;
+    color: #038ACB;
+    font-size: 18px;
+    font-weight: bold;
+    padding-bottom: 10px;
+}
+
+#price-calc td {
+    border-bottom: none;
+    color: #8464EF;
+    text-align: center;
+    padding: 5px;
+}

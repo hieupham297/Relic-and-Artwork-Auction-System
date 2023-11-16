@@ -1,0 +1,15 @@
+.current-time-main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#time {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+#date {
+    font-size: 14px;
+    color: #666;
+}

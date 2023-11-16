@@ -17,3 +17,18 @@
     background-color: #8464EF;
     color: #fff;
 }
+
+.active-page {
+    background-color: #8464EF;
+    color: #fff;
+}
+
+.disabled-button {
+    cursor: default;
+    margin: 5px;
+    padding: 5px 10px;
+    color: #8464EF;
+    border: 1px solid #8464EF;
+    border-radius: 5px;
+    background-color: transparent;
+}

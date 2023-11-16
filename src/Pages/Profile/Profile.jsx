@@ -83,7 +83,7 @@ export const Profile = () => {
               <span>Bạn chưa đăng bán sản phẩm nào!</span>
             </div>
           </div>
-          <Pagination />
+          {/* <Pagination /> */}
         </div>
       </div>
     </>
