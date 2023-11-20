@@ -1,0 +1,21 @@
+button {
+    height: 38px;
+    width: 80px;
+    color: #d4cefe;
+    font-weight: bold;
+    font-size: 15px;
+    background-color: #624de3;
+    border: none;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Hiệu ứng đổ bóng */
+    transition: box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+button:hover {
+    transform: translateY(3px); /* Di chuyển button xuống 2px khi hover */
+    border: 2px solid #8464ef;
+    background-color: white;
+    color: #8464ef;
+    box-shadow: none;
+}

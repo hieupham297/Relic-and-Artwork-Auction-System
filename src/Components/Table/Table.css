@@ -1,0 +1,24 @@
+table {
+    margin: 0 auto;
+    margin-top: 20px;
+    background-color: transparent;
+    border-collapse: collapse; /* Gộp các đường biên của ô */
+    width: 80%;
+}
+
+th, td {
+    text-align: center;
+    padding: 10px;
+  }
+
+thead tr {
+    border-bottom: 1px solid #896BFF;
+  }
+  
+  tbody tr {
+    border-bottom: 1px solid #896BFF;
+  }
+  
+  tbody tr:last-child {
+    border-bottom: none;
+  }
