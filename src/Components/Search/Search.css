@@ -3,20 +3,20 @@
 .search-wrapper {
     height: 25px;
     width: 16%;
-    margin-top: auto;
-    margin-bottom: auto;
+    margin-top: 20px;
+    margin-left: 160px;
     display: flex;
     align-items: center;
-    background-color: #FFFFFF;
+    background-color: transparent;
     border: 1px solid #8464EF;
-    border-radius: 20px;
+    border-radius: 8px;
     padding: 5px 5px 5px 10px;
 
 }
 
 .fa-search {
     margin-right: 10px;
-    color: #888;
+    color: #3F5CA8;
     /* Màu của biểu tượng tìm kiếm */
 }
 
@@ -28,5 +28,6 @@
 }
 
 .search-wrapper input::placeholder {
-    color: #666666;
+    color: #3F5CA8;
+    font-size: 15px;
 }

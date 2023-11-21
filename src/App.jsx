@@ -11,6 +11,9 @@ import { Register } from "./Pages/Register/Register";
 import { Profile } from "./Pages/Profile/Profile";
 import { Navbar } from "./Components/Navbar/Navbar";
 import { AuctionInSession } from "./Pages/AuctionInSession/AuctionInSession";
+import { AdminUserManage } from "./Pages/AdminUserManage/AdminUserManage";
+import { AdminApproveAuction } from "./Pages/AdminApproveAuction/AdminApproveAuction";
+import { AdminStatistic } from "./Pages/AdminStatistic/AdminStatistic";
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -41,6 +44,9 @@ function App() {
         <Route path="/register" element={<Register />} />
         <Route path="/profile/:userId" element={<Profile />} />
         <Route path="/auction-in-session" element={<AuctionInSession />} />
+        <Route path="/admin/user-manage" element={<AdminUserManage />} />
+        <Route path="/admin/approve-auction" element={<AdminApproveAuction />} />
+        <Route path="/admin/statistic" element={<AdminStatistic/>}/>
       </Routes>
     </div>
   );
