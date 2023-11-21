@@ -29,7 +29,20 @@ export const Navbar = (props) => {
         </div>
         <CurrentTime />
         {props.isLoggedIn ? (
-          <p>{props.userData.fullName}</p>
+          <div style={{ display: "flex", alignItems: "center" }}>
+            <NavLink
+              to={`profile/${props.userData.userId}`}
+              style={{ textDecoration: "none" }}
+            >
+              <div className="auth-avatar">
+                <img
+                  src={`${process.env.PUBLIC_URL}${props.userData.urlAvatar}`}
+                  alt=""
+                />
+                <span>{props.userData.fullName}</span>
+              </div>
+            </NavLink>
+          </div>
         ) : (
           <span
             className="avatar-icon material-symbols-outlined"

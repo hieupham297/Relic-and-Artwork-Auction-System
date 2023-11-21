@@ -24,7 +24,6 @@ export const AuctionDetail = () => {
     const fetchData = async () => {
       try {
         const data = await findAuctionById(auctionId, sampleData.data);
-        console.log(data);
         setDetailData(data);
         setDataLoaded(true);
       } catch (error) {

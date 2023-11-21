@@ -31,6 +31,18 @@ export const findAuctionById = (id, data) => {
   return data.find((auction) => auction.auctionId === id);
 };
 
+export const findUserById = (id, data) => {
+  return data.find((user) => user.userId === id);
+};
+
+export const findAuctionByOwner = (userId, data) => {
+  return data.filter((auction) => auction.ownerId === userId);
+};
+
+export const findAuctionByBidder = (userId, data) => {
+  return data.filter((auction) => auction.bidderId === userId);
+};
+
 export const handleLogin = (userName, password, data) => {
   const user = data.find((account) => account.userName === userName);
 

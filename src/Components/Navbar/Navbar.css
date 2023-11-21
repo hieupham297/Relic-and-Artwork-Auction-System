@@ -49,3 +49,25 @@
     line-height: 60px;
     cursor: pointer;
 }
+
+.auth-avatar {
+    border: 2px solid#8464EF;
+    border-radius: 40px;
+    padding-right: 10px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+}
+
+.auth-avatar img {
+    margin-right: 10px;
+    width: 45px;
+    height: 45px;
+}
+
+.auth-avatar span {
+    /* color: rgba(0, 0, 0, 0.724); */
+    color: #3F5CA8;
+    font-size: 16px;
+    font-weight: 600;
+}

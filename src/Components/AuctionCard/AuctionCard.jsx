@@ -38,11 +38,12 @@ export const AuctionCard = (props) => {
 };
 
 export const HorizontalAuctionCard = (props) => {
+  const imageUrl = `${process.env.PUBLIC_URL}${props.urlImg}`;
   return (
     <>
       <div className="horizontal-card-main">
         <div id="item-image">
-          <img src={props.urlImg} alt="" />
+          <img src={imageUrl} alt="" />
         </div>
         <div id="item-info">
           <div id="auction-item-name">{props.productName}</div>

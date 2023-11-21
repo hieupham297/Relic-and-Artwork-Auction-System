@@ -14,6 +14,11 @@ const HOME = "home_pin";
 const BADGE = "badge";
 
 export const Register = () => {
+  const handleRegister = () => {
+    window.alert("Bạn đã đăng ký thành công!");
+    window.location.href = "/homepage";
+  };
+
   return (
     <>
       <PageTitle pageTitle="Đăng ký tài khoản" />
@@ -28,6 +33,7 @@ export const Register = () => {
                   iconName={EDIT_SQUARE}
                   inputType="text"
                   placeholder="Ví dụ: Phạm Văn H"
+                  onChange={(value) => {}}
                 />
               </div>
             </td>
@@ -38,6 +44,7 @@ export const Register = () => {
                   iconName={EDIT_SQUARE}
                   inputType="text"
                   placeholder="Nhập tên đăng nhập ..."
+                  onChange={(value) => {}}
                 />
               </div>
             </td>
@@ -50,6 +57,7 @@ export const Register = () => {
                   iconName={LOCK}
                   inputType="password"
                   placeholder="Nhập mật khẩu ..."
+                  onChange={(value) => {}}
                 />
               </div>
             </td>
@@ -60,6 +68,7 @@ export const Register = () => {
                   iconName={LOCK}
                   inputType="password"
                   placeholder="Nhập lại mật khẩu ..."
+                  onChange={(value) => {}}
                 />
               </div>
             </td>
@@ -72,6 +81,7 @@ export const Register = () => {
                   iconName={EMAIL}
                   inputType="email"
                   placeholder="Nhập địa chỉ email ..."
+                  onChange={(value) => {}}
                 />
               </div>
             </td>
@@ -82,6 +92,7 @@ export const Register = () => {
                   iconName={PHONE}
                   inputType="text"
                   placeholder="Nhập số điện thoại ..."
+                  onChange={(value) => {}}
                 />
               </div>
             </td>
@@ -110,6 +121,7 @@ export const Register = () => {
                   iconName={CALENDAR}
                   inputType="date"
                   placeholder="yyyy/mm/dd"
+                  onChange={(value) => {}}
                 />
               </div>
             </td>
@@ -124,6 +136,7 @@ export const Register = () => {
                   iconName={HOME}
                   inputType="text"
                   placeholder="Nhập địa chỉ cụ thể ..."
+                  onChange={(value) => {}}
                 />
               </div>
             </td>
@@ -138,6 +151,7 @@ export const Register = () => {
                   iconName={BADGE}
                   inputType="text"
                   placeholder="Nhập CMND/CCCD ..."
+                  onChange={(value) => {}}
                 />
               </div>
             </td>
@@ -148,6 +162,7 @@ export const Register = () => {
                   iconName={CALENDAR}
                   inputType="date"
                   placeholder=""
+                  onChange={(value) => {}}
                 />
               </div>
             </td>
@@ -158,6 +173,7 @@ export const Register = () => {
                   iconName={HOME}
                   inputType="text"
                   placeholder="Nơi cấp ..."
+                  onChange={(value) => {}}
                 />
               </div>
             </td>
@@ -172,7 +188,12 @@ export const Register = () => {
             đấu giá trực tuyến Relic & Artwork Auction.
           </span>
         </div>
-        <CustomButton name="Đăng ký tài khoản" width="600px" height="50px" />
+        <CustomButton
+          name="Đăng ký tài khoản"
+          width="600px"
+          height="50px"
+          onClick={() => handleRegister()}
+        />
       </div>
     </>
   );

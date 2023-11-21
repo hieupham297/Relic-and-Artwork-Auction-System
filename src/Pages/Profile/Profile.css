@@ -86,3 +86,28 @@
     display: flex;
     flex-direction: column;
 }
+
+.history-list-header {
+    display: flex;
+    align-items: center;
+}
+
+.history-list-header h2 {
+    color: #3F5CA8;
+    margin-right: 50px;
+}
+
+.history-list-header select {
+    font-size: 15px;
+    color: #3F5CA8;
+    border: 1px solid #3F5CA8;
+    border-radius: 10px;
+    padding: 0px 10px;
+    height: 35px;
+    cursor: pointer;
+}
+
+.history-list-header option {
+    color: #3F5CA8;
+    cursor: pointer;
+}

@@ -16,7 +16,8 @@
             "phoneNumber": "0975504618",
             "gender": "Female",
             "dob": "10/05/2002",
-            "address": "Gia Lâm - Hà Nội"
+            "address": "Gia Lâm - Hà Nội",
+            "urlAvatar": "/AvatarImg/female_avatar.png"
         },
         {
             "userName": "nqdung2002",
@@ -28,7 +29,8 @@
             "phoneNumber": "0977504004",
             "gender": "Male",
             "dob": "27/08/2002",
-            "address": "Nam Từ Liêm - Hà Nội"
+            "address": "Nam Từ Liêm - Hà Nội",
+            "urlAvatar": "/AvatarImg/male_avatar.png"
         },
         {
             "userName": "hieuph2907",
@@ -40,7 +42,8 @@
             "phoneNumber": "0977618004",
             "gender": "Male",
             "dob": "29/07/2002",
-            "address": "Đông Hưng - Thái Bình"
+            "address": "Đông Hưng - Thái Bình",
+            "urlAvatar": "/AvatarImg/male_avatar.png"
         },
         {
             "userName": "manhhd2002",
@@ -52,7 +55,8 @@
             "phoneNumber": "0979002404",
             "gender": "Male",
             "dob": "07/07/2002",
-            "address": "Cầu Giấy - Hà Nội"
+            "address": "Cầu Giấy - Hà Nội",
+            "urlAvatar": "/AvatarImg/male_avatar.png"
         }
     ]
 }

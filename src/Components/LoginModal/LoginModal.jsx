@@ -32,7 +32,6 @@ export const LoginModal = (props) => {
     } else {
       props.handleLoginSuccess(res.user);
       props.closeModal();
-      console.log(res.user);
     }
   };
 
@@ -50,11 +49,11 @@ export const LoginModal = (props) => {
 
           <div className="login-form">
             <div>
-              <CustomLabel label="Tên đăng nhập / Email" />
+              <CustomLabel label="Tên đăng nhập" />
               <CustomInput
                 iconName={EMAIL_ICON}
                 inputType="email"
-                placeholder="Nhập tên đăng nhập / email ..."
+                placeholder="Nhập tên đăng nhập ..."
                 onChange={(value) => handleInputChange(value, "userName")}
                 value={userName}
               />
