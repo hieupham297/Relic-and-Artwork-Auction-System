@@ -6,6 +6,7 @@
 
 .icon {
     color: #A5B9ED;
+    font-size: 20px;
 }
 
 .custom-input input {
@@ -18,4 +19,5 @@
 
 .custom-input input::placeholder {
     color: #A5B9ED;
+    font-size: 14px;
 }

@@ -11,7 +11,7 @@ import {
   findUserById,
 } from "../../Utils/function";
 
-export const Profile = () => {
+export const Profile = (props) => {
   const { userId } = useParams();
   // import data
   const sampleUserData = require("../../Data/userData.json");
@@ -61,7 +61,6 @@ export const Profile = () => {
         // Fetch registered auction
         const tab1Data = await findAuctionByBidder(userId, sampleData.data);
         setRegisteredAuction(tab1Data);
-        console.log(tab1Data);
 
         // Fetch auctions by owner
         const tab2Data = await findAuctionByOwner(userId, sampleData.data);
@@ -100,7 +99,11 @@ export const Profile = () => {
     );
   }
 
-  return (
+  const handleLogout = () => {
+    window.location.href = "/homepage";
+  };
+
+  return props.isLoggedIn ? (
     <div key={userId}>
       <PageTitle pageTitle="Thông tin cá nhân" />
       <div className="profile-content">
@@ -114,32 +117,39 @@ export const Profile = () => {
             <h2>{userData.fullName}</h2>
           </span>
           <table>
-            <tr>
-              <th>Mã người dùng</th>
-              <td>{userData.userId}</td>
-            </tr>
-            <tr>
-              <th>Ngày sinh</th>
-              <td>{userData.dob}</td>
-            </tr>
-            <tr>
-              <th>Giới tính</th>
-              <td>{userData.gender}</td>
-            </tr>
-            <tr>
-              <th>Email</th>
-              <td>{userData.email}</td>
-            </tr>
-            <tr>
-              <th>Số điện thoại</th>
-              <td>{userData.phoneNumber}</td>
-            </tr>
-            <tr>
-              <th>Địa chỉ</th>
-              <td>{userData.address}</td>
-            </tr>
+            <tbody>
+              <tr>
+                <th>Mã người dùng</th>
+                <td>{userData.userId}</td>
+              </tr>
+              <tr>
+                <th>Ngày sinh</th>
+                <td>{userData.dob}</td>
+              </tr>
+              <tr>
+                <th>Giới tính</th>
+                <td>{userData.gender}</td>
+              </tr>
+              <tr>
+                <th>Email</th>
+                <td>{userData.email}</td>
+              </tr>
+              <tr>
+                <th>Số điện thoại</th>
+                <td>{userData.phoneNumber}</td>
+              </tr>
+              <tr>
+                <th>Địa chỉ</th>
+                <td>{userData.address}</td>
+              </tr>
+            </tbody>
           </table>
-          <CustomButton name="Đăng xuất" height="40px" width="100px" />
+          <CustomButton
+            name="Đăng xuất"
+            height="40px"
+            width="100px"
+            onClick={() => handleLogout()}
+          />
         </div>
         <div className="history-list">
           <div className="history-list-header">
@@ -169,6 +179,7 @@ export const Profile = () => {
                       startPrice={auction.startPrice}
                       auctionStart={auction.auctionStart}
                       urlImg={auction.urlImg}
+                      auctionId={auction.auctionId}
                     />
                   ))
                 ) : (
@@ -228,5 +239,7 @@ export const Profile = () => {
         </div>
       </div>
     </div>
+  ) : (
+    <PageTitle pageTitle="PAGE NOT FOUND" />
   );
 };

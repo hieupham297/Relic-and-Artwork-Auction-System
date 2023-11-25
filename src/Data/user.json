@@ -1,12 +1,6 @@
 {
     "data": [
         {
-            "userName": "admin",
-            "password": "admin",
-            "role": "admin",
-            "fullName": "System Admin"
-        },
-        {
             "userName": "dtad1005",
             "password": "dtad2002",
             "role": "customer",

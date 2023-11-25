@@ -22,7 +22,7 @@ export const Navbar = (props) => {
         </NavLink>
         <div className="menu-list">
           <SpanNavLink navLinkName="Trang chủ" route="/homepage" />
-          <SpanNavLink navLinkName="Các cuộc đấu giá" route="/auction-list" />
+          <DropDownMenu />
           <SpanNavLink navLinkName="Tin tức" route="/news" />
           <SpanNavLink navLinkName="Giới thiệu" route="/about" />
           <SpanNavLink navLinkName="Liên hệ" route="/contact" />
@@ -69,5 +69,26 @@ export const SpanNavLink = (props) => {
         <div id="underline"></div>
       </div>
     </>
+  );
+};
+
+export const DropDownMenu = () => {
+  return (
+    <div className="nav-link-main dropdown">
+      <NavLink>Các cuộc đấu giá </NavLink>
+      <div id="underline"></div>
+      <ul className="dropdown-menu">
+        <li>
+          <NavLink to="/auction-list" id="dropdown-option">
+            Danh sách đấu giá
+          </NavLink>
+        </li>
+        <li>
+          <NavLink to="/product-register" id="dropdown-option">
+            Đăng bán sản phẩm
+          </NavLink>
+        </li>
+      </ul>
+    </div>
   );
 };

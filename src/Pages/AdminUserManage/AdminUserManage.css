@@ -1,0 +1,31 @@
+.user-manage-main {
+    display: flex;
+}
+
+.page-content {
+    padding: 0px 20px;
+}
+
+#user-manage-table {
+    margin: 0 auto;
+    margin-top: 20px;
+    background-color: transparent;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#user-manage-table th,
+td {
+    font-size: 15px;
+    text-align: center;
+    padding: 10px 30px;
+}
+
+#user-manage-table thead,
+tr {
+    border-bottom: 1px solid #896BFF;
+}
+
+#user-manage-table tr:last-child {
+    border-bottom: none;
+}

@@ -6,6 +6,7 @@ import { PageTitle } from "../../Components/PageTitle/PageTitle";
 import { Pagination } from "../../Components/Pagnition/Pagnition";
 import "./AuctionList.css";
 import { searchFunction, filterByStatus } from "../../Utils/function";
+
 const ITEM_PER_PAGE = 6;
 export const AuctionList = () => {
   const sampleData = require("../../Data/data.json");

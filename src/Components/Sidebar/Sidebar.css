@@ -1,0 +1,50 @@
+.sidebar-main {
+    height: 100vh;
+    width: 24%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar-menu {
+    display: flex;
+    flex-direction: column;
+}
+
+.admin-account {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 60px;
+}
+
+.admin-account span {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 10px;
+    color: #3F5CA8;
+}
+
+.sidebar-tab {
+    height: 50px;
+    background-color: transparent;
+    border: none;
+    font-size: 17px;
+    color: #5D7285;
+    font-weight: bold;
+    text-align: left;
+    cursor: pointer;
+    padding-left: 50px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.sidebar-tab:hover {
+    background-color: rgba(255, 255, 255, 0.737);
+    color: #0C7FDA;
+}
+
+.sidebar-main .sidebar-menu .sidebar-tab.active {
+    background-color: rgba(255, 255, 255, 0.737);
+    color: #0C7FDA;
+}

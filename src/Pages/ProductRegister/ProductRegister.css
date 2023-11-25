@@ -1,0 +1,41 @@
+.page-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.page-header select {
+    font-size: 15px;
+    color: #3F5CA8;
+    border: 1px solid #3F5CA8;
+    border-radius: 10px;
+    padding: 0px 10px;
+    height: 35px;
+    cursor: pointer;
+}
+
+.page-header option {
+    color: #3F5CA8;
+    cursor: pointer;
+}
+
+.product-register-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin: auto;
+    background-color: white;
+    border-radius: 15px;
+    /* padding: 0px 20px 30px 80px; */
+}
+
+.product-register-main table {
+    width: 100%;
+}
+
+.product-register-main td {
+    width: 400px;
+    padding: 20px 50px 10px 50px;
+    /* padding: 35px 150px 10px 0px; */
+}

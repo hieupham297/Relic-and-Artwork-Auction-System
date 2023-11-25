@@ -1,19 +1,47 @@
-button {
-    height: 38px;
-    width: 80px;
-    color: #d4cefe;
-    font-weight: bold;
+.approve-auction-main {
+    display: flex;
+}
+
+.page-content {
+    padding: 0px 20px;
+}
+
+#approve-auction-table {
+    margin: 0 auto;
+    margin-top: 20px;
+    background-color: transparent;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#approve-auction-table th,
+td {
     font-size: 15px;
-    background-color: #624de3;
+    text-align: center;
+    padding: 10px 15px;
+}
+
+#approve-auction-table thead,
+tr {
+    border-bottom: 1px solid #896BFF;
+}
+
+#approve-auction-table tr:last-child {
+    border-bottom: none;
+}
+
+#detail-btn {
+    height: 28px;
+    width: 60px;
+    color: white;
+    font-size: 13px;
+    background-color: #624DE3;
     border: none;
     border-radius: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Hiệu ứng đổ bóng */
-    transition: box-shadow 0.3s ease;
     cursor: pointer;
 }
 
-button:hover {
-    transform: translateY(3px); /* Di chuyển button xuống 2px khi hover */
+#detail-btn:hover {
     border: 2px solid #8464ef;
     background-color: white;
     color: #8464ef;

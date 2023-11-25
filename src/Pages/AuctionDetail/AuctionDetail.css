@@ -15,7 +15,7 @@
     width: 40%;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
 }
 
@@ -112,4 +112,11 @@
     margin-top: 40px;
     border-radius: 10px;
     border: 2px solid #8464EF;
+}
+
+#auction-alert {
+    font-size: 1.2rem;
+    /* color: #3F5CA8; */
+    color: #FF895F;
+    font-weight: bold;
 }

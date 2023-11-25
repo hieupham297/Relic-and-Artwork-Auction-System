@@ -18,7 +18,17 @@ export const AuctionCard = (props) => {
         <div className="info">
           <div>
             <span id="grey-label">Trạng thái: </span>{" "}
-            <span id="status-label">{props.status}</span>{" "}
+            {props.status === "Chưa diễn ra" ? (
+              <span id="status-label">{props.status}</span>
+            ) : props.status === "Đang diễn ra" ? (
+              <span id="status-label" style={{ color: "green" }}>
+                {props.status}
+              </span>
+            ) : (
+              <span id="status-label" style={{ color: "red" }}>
+                {props.status}
+              </span>
+            )}
           </div>
           <div>
             <span id="grey-label">Giá khởi điểm: </span>{" "}
@@ -50,7 +60,17 @@ export const HorizontalAuctionCard = (props) => {
           <div>
             <div style={{ marginBottom: "5px" }}>
               <span id="grey-label">Trạng thái: </span>{" "}
-              <span id="status-label">{props.status}</span>{" "}
+              {props.status === "Chưa diễn ra" ? (
+                <span id="status-label">{props.status}</span>
+              ) : props.status === "Đang diễn ra" ? (
+                <span id="status-label" style={{ color: "green" }}>
+                  {props.status}
+                </span>
+              ) : (
+                <span id="status-label" style={{ color: "red" }}>
+                  {props.status}
+                </span>
+              )}
             </div>
             <div style={{ marginBottom: "5px" }}>
               <span id="grey-label">Giá khởi điểm: </span>{" "}
@@ -66,7 +86,9 @@ export const HorizontalAuctionCard = (props) => {
             name="Chi tiết"
             height="40px"
             width="100px"
-            route="detail"
+            route={`/auction-${
+              props.status === "Đang diễn ra" ? "in-session" : "list/detail"
+            }/${props.auctionId}`}
           />
         </div>
       </div>
