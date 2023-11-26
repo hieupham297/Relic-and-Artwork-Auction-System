@@ -2,7 +2,6 @@ import { useState } from "react";
 import { Pagination } from "../../Components/Pagnition/Pagnition";
 import { Search } from "../../Components/Search/Search";
 import { Sidebar } from "../../Components/Sidebar/Sidebar";
-import Table from "../../Components/Table/Table";
 import "./AdminStatistic.css";
 
 export const AdminStatistic = () => {
@@ -23,7 +22,7 @@ export const AdminStatistic = () => {
       <Sidebar />
       <div className="page-content">
         <Search />
-        <table id="admin-statistic-table">
+        <table id="admin-statistic-table" style={{textAlign: "center"}}>
           <thead>
             <tr>
               <th>STT</th>

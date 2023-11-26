@@ -1,7 +1,4 @@
-import Table from "../../Components/Table/Table";
 import "./AdminUserManage.css";
-import "../../Data/userData.json";
-import "../../Components/Search/Search";
 import { Sidebar } from "../../Components/Sidebar/Sidebar";
 import { Search } from "../../Components/Search/Search";
 import { Pagination } from "../../Components/Pagnition/Pagnition";

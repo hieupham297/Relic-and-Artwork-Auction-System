@@ -2,7 +2,6 @@ import { useState } from "react";
 import { Pagination } from "../../Components/Pagnition/Pagnition";
 import { Search } from "../../Components/Search/Search";
 import { Sidebar } from "../../Components/Sidebar/Sidebar";
-import Table from "../../Components/Table/Table";
 import "./AdminApproveAuction.css";
 
 export const AdminApproveAuction = () => {
@@ -23,7 +22,7 @@ export const AdminApproveAuction = () => {
       <Sidebar />
       <div className="page-content">
         <Search />
-        <table id="approve-auction-table">
+        <table id="approve-auction-table" style={{ textAlign: "center" }}>
           <thead>
             <tr>
               <th>STT</th>

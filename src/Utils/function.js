@@ -56,3 +56,11 @@ export const handleLogin = (userName, password, data) => {
 
   return { user };
 };
+
+// Format a number to currency format
+export const formatCurrency = (amount) => {
+  return new Intl.NumberFormat("vi-VN", {
+    style: "currency",
+    currency: "VND",
+  }).format(amount);
+};

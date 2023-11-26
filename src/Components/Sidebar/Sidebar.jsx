@@ -5,6 +5,10 @@ import "./Sidebar.css";
 const avaImg = require("../../Assets/auction-user-avatar.png");
 export const Sidebar = () => {
   const handleLogout = () => {
+    sessionStorage.removeItem("isLoggedIn");
+    sessionStorage.removeItem("userData");
+    sessionStorage.removeItem("isAdmin");
+
     window.location.href = "/homepage";
   };
   return (
