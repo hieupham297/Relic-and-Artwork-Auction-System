@@ -8,6 +8,7 @@ import { LoginModal } from "../../Components/LoginModal/LoginModal";
 import "./AuctionDetail.css";
 import { findAuctionById } from "../../Utils/function";
 import { MessageBox } from "../../Components/MessageBox/MessageBox";
+import { formatCurrency } from "../../Utils/function";
 
 export const AuctionDetail = (props) => {
   const sampleData = require("../../Data/data.json");
@@ -122,25 +123,25 @@ export const AuctionDetail = (props) => {
                   <th>
                     <CustomLabel label="Giá khởi điểm:" />
                   </th>
-                  <td>{detailData.startPrice}</td>
+                  <td>{formatCurrency(detailData.startPrice)}</td>
                 </tr>
                 <tr>
                   <th>
                     <CustomLabel label="Phí đăng ký:" />
                   </th>
-                  <td>{detailData.registrationFee}</td>
+                  <td>{formatCurrency(detailData.registrationFee)}</td>
                 </tr>
                 <tr>
                   <th>
                     <CustomLabel label="Bước giá:" />
                   </th>
-                  <td>{detailData.step}</td>
+                  <td>{formatCurrency(detailData.step)}</td>
                 </tr>
                 <tr>
                   <th>
                     <CustomLabel label="Tiền đặt cược:" />
                   </th>
-                  <td>{detailData.deposit}</td>
+                  <td>{formatCurrency(detailData.deposit)}</td>
                 </tr>
                 <tr>
                   <th>
@@ -281,6 +282,18 @@ export const AuctionDetail = (props) => {
                     <CustomLabel label="Họa sỹ" />
                   </th>
                   <td>{detailData.artist}</td>
+                </tr>
+                <tr>
+                  <th>
+                    <CustomLabel label="Nguồn gốc" />
+                  </th>
+                  <td>{detailData.origin}</td>
+                </tr>
+                <tr>
+                  <th>
+                    <CustomLabel label="Mô tả" />
+                  </th>
+                  <td>{detailData.description}</td>
                 </tr>
               </tbody>
             </table>

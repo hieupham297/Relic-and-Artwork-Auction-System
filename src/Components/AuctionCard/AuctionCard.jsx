@@ -1,5 +1,6 @@
 import "./AuctionCard.css";
 import { CustomButton } from "../CustomButton/CustomButton";
+import { formatCurrency } from "../../Utils/function";
 export const AuctionCard = (props) => {
   const imageUrl = `${process.env.PUBLIC_URL}${props.urlImg}`;
 
@@ -32,7 +33,7 @@ export const AuctionCard = (props) => {
           </div>
           <div>
             <span id="grey-label">Giá khởi điểm: </span>{" "}
-            <span id="black-label">{props.startPrice}</span>{" "}
+            <span id="black-label">{formatCurrency(props.startPrice)}</span>{" "}
           </div>
         </div>
 
@@ -74,7 +75,7 @@ export const HorizontalAuctionCard = (props) => {
             </div>
             <div style={{ marginBottom: "5px" }}>
               <span id="grey-label">Giá khởi điểm: </span>{" "}
-              <span id="black-label">{props.startPrice}</span>{" "}
+              <span id="black-label">{formatCurrency(props.startPrice)}</span>{" "}
             </div>
             <div style={{ marginBottom: "5px" }}>
               <span id="grey-label">Thời gian diễn ra: </span>{" "}

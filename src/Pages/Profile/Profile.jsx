@@ -100,6 +100,10 @@ export const Profile = (props) => {
   }
 
   const handleLogout = () => {
+    sessionStorage.removeItem("isLoggedIn");
+    sessionStorage.removeItem("userData");
+    sessionStorage.removeItem("isAdmin");
+
     window.location.href = "/homepage";
   };
 
